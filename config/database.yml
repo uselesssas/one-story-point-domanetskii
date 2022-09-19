@@ -1,0 +1,22 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch('RAILS_MAX_THREADS') { 5 } %>
+  username: <%= ENV.fetch('DATABASE_USER') { 'postgres' } %>
+  password: <%= ENV.fetch('DATABASE_PASSWORD') { 'postgres' } %>
+  host: <%= ENV.fetch('DATABASE_HOST') { 'localhost' } %>
+  port: <%= ENV.fetch('DATABASE_PORT') { 5432 } %>
+
+development:
+  <<: *default
+  database: one_story_point_domanetskii_development
+
+test:
+  <<: *default
+  database: one_story_point_domanetskii_test
+
+production:
+  <<: *default
+  database: one_story_point_domanetskii_production
+  username: one_story_point_domanetskii
+  password: <%= ENV['ONE_STORY_POINT_DOMANETSKII_DATABASE_PASSWORD'] %>

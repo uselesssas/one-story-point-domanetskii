@@ -1,0 +1,20 @@
+<table>
+  <caption>Book</caption>
+  <tr>
+    <th>Name</th>
+    <th>№ shelf</th>
+    <th>Genre</th>
+    <th>Author</th>
+    <th>Settings</th>
+  </tr>
+  <tr>
+    <td><%= @book.title %></td>
+    <td><%= @book.shelf %></td>
+    <td><%= @book.genre %></td>
+    <td><%= @book.author.name %></td>
+    <td>
+      <%= link_to 'Edit', edit_book_path(@book) %>
+      <%= link_to 'Delete', book_path(@book), method: :delete %>
+    </td>
+  </tr>
+</table>

@@ -1,0 +1,7 @@
+<%= simple_form_for @book do |f| %>
+  <%= f.input :author_id, collection: @authors %>
+  <%= f.input :title %>
+  <%= f.input :genre %>
+  <%= f.input :shelf %>
+  <%= f.button :submit %>
+<% end %>

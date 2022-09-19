@@ -1,0 +1,13 @@
+<table>
+  <caption><%= @author.name %> - Books</caption>
+  <tr>
+    <th>Book name</th>
+  </tr>
+  <% @author.books.each do |book| %>
+    <tr>
+      <td>
+        <%= book.title %>
+      </td>
+    </tr>
+  <% end %>
+</table>
