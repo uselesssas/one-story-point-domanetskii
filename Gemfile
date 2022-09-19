@@ -22,6 +22,9 @@ gem 'jbuilder', '~> 2.7'
 gem 'puma', '~> 5.0'
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
+# Generate fake data
+gem 'ffaker'
+
 group :development, :test do
   # Debugging
   gem 'pry'
@@ -32,9 +35,6 @@ group :development, :test do
   gem 'rails-controller-testing'
   gem 'rspec-rails'
   gem 'shoulda-matchers', '~> 5.0'
-
-  # Generate fake data
-  gem 'ffaker'
 end
 
 group :development do
